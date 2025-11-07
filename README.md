@@ -46,6 +46,14 @@
 - **Ignore constants and lower-order terms** (e.g., O(2n) → O(n)).
 - Common use: Compare algorithms for scalability.
 
+### Time Complexity
+- Time complexity tells how many operations your algorithm performs relative to input size —
+it measures growth, not actual execution time.
+- If I double the input size, how much more work does my code do?
+
+### Space Complexity
+- Space complexity tells how much extra memory your program uses (besides inputs).
+
 ## 📝 Topics
 - 📊 [Arrays](./Arrays/)
 - 🔗 [Linked Lists](./Linked-Lists/)

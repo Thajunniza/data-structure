@@ -14,5 +14,12 @@ Example for `rows = 3` and `cols = 5`:
 ### Output
 *****
 *****
+
 *****
+### 🧮 Complexity Analysis
+- **Time Complexity:** O(row × column)  
+  > Because there are two nested loops — one for rows and one for columns.
+- **Space Complexity:** O(row × column)  
+  > Because we store the entire pattern in an array of strings.
+
 
