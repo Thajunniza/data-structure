@@ -33,6 +33,7 @@ Practicing pattern problems builds these core skills — the same logic later he
 - [ ] Solid Rectangle
 - [ ] Hollow Rectangle
 - [ ] Right-Angled Triangle
+- [ ] Right-Angled Numbered Pyramid
 - [ ] Inverted Triangle
 - [ ] Number/Alphabet Half Pyramid
 
