@@ -25,20 +25,23 @@ Practicing pattern problems builds these core skills — the same logic later he
 - For the Inner loop foucus on the columns and try to connect to the outerloops which is rows.
 - Print them inside the inner loop
 - Obeserve Symmentry (Optional)
+- We always use nested loops for printing the patterns. For the outer loop, we count the number of lines/rows and loop for them.
+- Next, for the inner loop, we focus on the number of columns and somehow connect them to the rows by forming a logic such that for each row we get the required number of columns to be printed.
 
 ---
 ## 🔹 Pattern Problem Categories
 
 ### Level 1 – Basic
 - [ ] Solid Rectangle
-- [ ] Hollow Rectangle
 - [ ] Right-Angled Triangle
 - [ ] Right-Angled Numbered Pyramid
-- [ ] Inverted Triangle
-- [ ] Number/Alphabet Half Pyramid
+- [ ] Right-Angled Number Pyramid – II
+- [ ] Inverted Right Pyramid
+- [ ] Inverted Numbered Right-Angled Pyramid
+
 
 ### Level 2 – Symmetric
-- [ ] Full Pyramid
+- [ ] Full Star Pyramid
 - [ ] Inverted Pyramid
 - [ ] Diamond
 - [ ] Hourglass
