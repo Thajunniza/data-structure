@@ -1,36 +1,44 @@
-# 🧩 Level 2 – Intermediate Patterns
+# 🧩 Level 2 – Symmetric Patterns
 
-These patterns introduce **alignment, spacing, and symmetry** — the next step after mastering basic right-angled structures.
+These patterns introduce **alignment, spacing, and symmetry** —  
+the next step after mastering basic right-angled structures in Level 1.
 
-##🧠 1️⃣ Understand What “Symmetry” Means in Patterns
+---
 
-When you see a symmetrical shape, it usually means there’s a mirror axis:
+## 🧠 Understanding Symmetry in Patterns
 
-For pyramids → symmetry about the vertical center line
+When you see a **symmetrical shape**, it usually means there’s a **mirror axis**:
 
-For diamonds → symmetry about both vertical and horizontal centers
+- For **pyramids** → symmetry about the **vertical center line**  
+- For **diamonds** → symmetry about both **vertical and horizontal** centers  
 
-So you’re not printing “random stars” — you’re building reflections of left and right halves.
+You’re not printing “random stars” —  
+you’re building **reflections** of the left and right halves using spaces and stars (or numbers).
 
-## 💡 Key Idea:
+---
 
-Every symmetrical pattern can be divided into spaces + content (stars/numbers) that mirror around a central axis..
+### 💡 Key Idea
+> Every symmetrical pattern can be divided into **spaces + content** (stars/numbers)  
+> that mirror around a **central axis**.
 
-## 🧩 2️⃣ The Golden Rule of Symmetry in Patterns
+---
 
-Spaces make symmetry possible, stars make shape visible.
+### 🧩 The Golden Rule of Symmetry
+> **Spaces make symmetry possible, stars make shape visible.**
 
-That’s it.
-If you learn to balance spaces before and after your stars, you can center anything — stars, numbers, letters — perfectly.
+If you learn to **balance spaces before and after your stars**,  
+you can center anything — stars, numbers, or letters — perfectly.
 
 ---
 
 ## 🟨 [1. Star Pyramid (Full Pyramid)](starPyramid.js)
 
 ### 🔹 What It Is
-A centered pyramid pattern made of `*`, where each row contains an odd number of stars and is aligned symmetrically using spaces.
+A centered pyramid pattern made of `*`,  
+where each row contains an odd number of stars and is aligned symmetrically using spaces.
 
-Example for `rows = 5`:
+**Example for `rows = 5`:**
+
 
 ### Output
 ````
@@ -131,6 +139,113 @@ Example for `rows = 5`:
 - **Space Complexity:** O(n²)  
   > Each row is stored as a string, and the sum of all characters printed grows quadratically with the number of rows.
 
+
+## 🟩 [5. Binary Number Triangle Pattern](binaryNumberTrianglePattern.js)
+
+### 🔹 What It Is
+A right-angled triangle pattern made of alternating binary digits (`0` and `1`).  
+Each row starts with `1` if the row number is odd, or `0` if the row number is even — and alternates thereafter.
+
+Example for `rows = 5`:
+
+### Output
+1
+01
+101
+0101
+10101
+
+
+### 🧮 Logic Breakdown
+- Each row number `i` determines the **starting bit**:
+  - If `i` is odd → start with `1`
+  - If `i` is even → start with `0`
+- Within a row, bits alternate (`0 → 1 → 0 → 1 …`).
+
+### 🧮 Complexity Analysis
+- **Time Complexity:** O(n²)  
+  > Outer loop runs `n` times; inner loop runs up to `i` times, totaling ~n² operations.
+- **Space Complexity:** O(n²)  
+  > Each row (string of binary digits) is stored; total grows quadratically with `n`.
+
+---
+## 🟪 [6. Number Crown Pattern](numberCrownPattern.js)
+
+### 🔹 What It Is
+A **symmetrical numeric pattern** that looks like a crown 👑.  
+Each row contains an increasing sequence of numbers on the left and a decreasing sequence on the right,  
+with a central gap that gets smaller in each row — forming a perfectly balanced crown-like structure.
+
+**Example for `rows = 5`:**
+1        1
+12      21
+123    321
+1234  4321
+1234554321
+
+
+### 🧮 Logic Breakdown
+- For each row `i`:
+  1. Print **ascending numbers** → `1` to `i`
+  2. Print **spaces** → `2 × (rows - i)` spaces
+  3. Print **descending numbers** → `i` to `1`
+- As `i` increases:
+  - The **spaces shrink by 2** per row.
+  - The numbers grow outward symmetrically from the center.
+
+---
+
+### 🧠 Example Breakdown for `rows = 5`
+
+| Row | Left Numbers | Spaces | Right Numbers | Output |
+|------|---------------|---------|----------------|---------|
+| 1 | 1 | 8 | 1 | `1        1` |
+| 2 | 12 | 6 | 21 | `12      21` |
+| 3 | 123 | 4 | 321 | `123    321` |
+| 4 | 1234 | 2 | 4321 | `1234  4321` |
+| 5 | 12345 | 0 | 54321 | `1234554321` |
+
+---
+
+### 🧮 Complexity Analysis
+- **Time Complexity:** O(n²)  
+  > For each of the `n` rows, we print ascending numbers, spaces, and descending numbers —  
+  resulting in total operations proportional to `n²`.
+- **Space Complexity:** O(n²)  
+  > Each row (numbers + spaces) is stored as a string → total memory usage grows quadratically with `n`.
+
+---
+
+### 🧩 Key Learnings
+- Reinforces **mirror symmetry** using numbers.  
+- Great practice for **string concatenation** and **space management**.  
+- Introduces the concept of **shrinking center gaps** — a common trick for centered symmetric patterns.
+
+---
+
+
+
+---
+
+## 🧩 Summary
+
+| # | Pattern Name | Concept Focus | Symmetry Type |
+|---|---------------|----------------|----------------|
+| 1️⃣ | Star Pyramid | Center alignment | Vertical |
+| 2️⃣ | Inverted Star Pyramid | Reverse symmetry | Vertical |
+| 3️⃣ | Diamond Star Pattern | Combined mirror logic | Vertical + Horizontal |
+| 4️⃣ | Half Diamond Star Pattern | Dual triangular reflection | Vertical |
+| 5️⃣ | Binary Number Triangle | Alternating logic pattern | Left-aligned |
+| 6️⃣ | Number Crown Pattern | Numeric mirror with shrinking space | Vertical |
+
+---
+
+## ✨ Key Takeaways
+- All patterns use **nested loops** — outer loop for rows, inner loop for columns/spaces.
+- Symmetry is achieved by **balancing spaces** and **content (stars/numbers)**.
+- Perfect for strengthening **logical reasoning** and **pattern visualization** skills.
+
+---
 
 
 
