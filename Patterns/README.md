@@ -42,9 +42,9 @@ Practicing pattern problems builds these core skills — the same logic later he
 
 ### Level 2 – Symmetric
 - [ ] Full Star Pyramid
-- [ ] Inverted Pyramid
-- [ ] Diamond
-- [ ] Hourglass
+- [ ] Inverted Star Pyramid
+- [ ] Diamond Star Pattern
+- [ ] Half Diamond Star Pattern
 
 ### Level 3 – Number & Character Logic
 - [ ] Pascal’s Triangle

@@ -75,3 +75,63 @@ Example for `rows = 5`:
   > Each row (containing spaces and stars) is stored in an array, and total characters across all rows sum up to O(n²).
 
 
+## 🟪 [3. Diamond Star Pattern](diamondStarPattern.js)
+
+### 🔹 What It Is
+A symmetrical pattern made by combining a **Full Star Pyramid** (increasing stars) and an **Inverted Star Pyramid** (decreasing stars).  
+It forms a perfect diamond shape with a vertical axis of symmetry.
+
+Example for `rows = 5`:
+
+### Output
+````
+   *
+  ***
+ *****
+*******
+ *****
+  ***
+   *
+`````
+
+### 🧮 Complexity Analysis
+- **Time Complexity:** O(n²)  
+  > The diamond consists of two pyramids (one upright and one inverted).  
+  > Each part individually runs in O(n²), and combining them still results in O(n²).
+- **Space Complexity:** O(n²)  
+  > Each row (spaces + stars) is stored as a string, and total characters across all rows grow quadratically with `n`.
+
+
+## 🟫 [4. Half Diamond Star Pattern](halfDiamondStarPattern.js)
+
+### 🔹 What It Is
+A pattern that forms a diamond shape split vertically in half.  
+It first increases the number of `*` per row (like a right-angled triangle) and then decreases, creating a half-diamond shape.
+
+Example for `rows = 5`:
+
+### Output
+````
+*
+**
+***
+****
+*****
+****
+***
+**
+*
+````
+
+
+### 🧮 Complexity Analysis
+- **Time Complexity:** O(n²)  
+  > The pattern is composed of two right-angled triangles (one increasing, one decreasing).  
+  > Both parts together still have quadratic growth in total operations.
+- **Space Complexity:** O(n²)  
+  > Each row is stored as a string, and the sum of all characters printed grows quadratically with the number of rows.
+
+
+
+
+
