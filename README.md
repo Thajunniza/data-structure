@@ -33,6 +33,123 @@ elements.
 ## How do we use DS:
 ![alt text](image.png)
 
+# 🧩 Types of Data Structure
+
+Data Structures are ways to store and organize data efficiently in memory.  
+They are broadly classified into two main types:
+
+1. **Primitive Data Structures**  
+2. **Non-Primitive Data Structures**
+
+---
+
+## 🟩 Primitive Data Structure
+
+- Basic data types and can’t be broken into simpler data types  
+- Act as **basic building blocks**  
+- Store a **single value**  
+- **Fixed and smaller** in size  
+- Represented in memory as **simple values**
+
+### 🔹 Types of Primitive Data Structures
+
+| Type  | Description | Example |
+|-------|--------------|----------|
+| **int** | Stores integers | `x = 10` |
+| **float** | Stores decimal numbers | `pi = 3.14` |
+| **bool** | Stores True/False values | `is_active = True` |
+| **str** | Stores text (sequence of characters) | `name = "Thaj"` |
+
+---
+
+## 🟦 Non-Primitive Data Structure
+
+- **Complex data types** built from primitive ones  
+- Can be broken into simpler data types  
+- **Larger in size** and can grow or shrink dynamically  
+- Represented in memory as **pointers or references** to other locations
+
+### 🔹 Types of Non-Primitive Data Structures
+
+---
+
+### **(a) Linear Data Structures**
+
+Data is arranged **in a sequence** — one after another.
+
+| Type | Description | Example |
+|------|--------------|----------|
+| **List** | Mutable, ordered collection | `[1, 2, 3]` |
+| **Tuple** | Immutable, ordered collection | `(1, 2, 3)` |
+| **Stack** | LIFO (Last In, First Out) structure | `push(), pop()` |
+| **Queue** | FIFO (First In, First Out) structure | `enqueue(), dequeue()` |
+| **Array** | Fixed-type elements (using `array` module) | `array('i', [1, 2, 3])` |
+
+---
+
+### **(b) Non-Linear Data Structures**
+
+Data is **not arranged sequentially**, but **hierarchically** or in **networks**.
+
+| Type | Description | Example |
+|------|--------------|----------|
+| **Set** | Unordered, unique values | `{1, 2, 3}` |
+| **Dictionary (Hash Map)** | Key–Value pairs | `{'a': 1, 'b': 2}` |
+| **Tree** | Hierarchical structure | `Binary Tree`, `BST` |
+| **Graph** | Nodes connected by edges | Social network model |
+
+---
+
+## 🧠 Summary
+
+| Category | Examples | Structure |
+|-----------|-----------|------------|
+| **Primitive** | int, float, bool, str | Single value |
+| **Non-Primitive (Linear)** | List, Tuple, Stack, Queue, Array | Sequential |
+| **Non-Primitive (Non-Linear)** | Set, Dict, Tree, Graph | Hierarchical / Network |
+
+---
+
+> 💡 **Tip:**  
+> Start with Python’s built-in structures (`list`, `tuple`, `set`, `dict`) before diving into advanced structures like `stack`, `queue`, or `tree`.
+
+# ⚙️ Types of Algorithms
+
+An **algorithm** is a **step-by-step procedure** to solve a problem or perform a task efficiently.  
+Algorithms can be categorized based on their **design techniques** and **problem-solving purpose**.
+
+---
+
+## 🧩 1️⃣ Based on Design / Approach
+
+| Type | Description | Example Problems |
+|------|--------------|------------------|
+| **Brute Force Algorithm** | Tries **all possible solutions** until the correct one is found. Simple but inefficient for large inputs. | Linear Search, Trial Division |
+| **Divide and Conquer** | Breaks a problem into smaller subproblems, solves them recursively, and combines the results. | Merge Sort, Quick Sort, Binary Search |
+| **Greedy Algorithm** | Makes the **locally optimal** choice at each step, hoping to find a global optimum. | Kruskal’s, Prim’s, Huffman Coding |
+| **Dynamic Programming (DP)** | Breaks problems into overlapping subproblems and **stores intermediate results** to avoid recomputation. | Fibonacci Series, Knapsack Problem |
+| **Backtracking** | Builds a solution step by step and **abandons a path** when it’s not feasible. | N-Queens, Sudoku Solver |
+| **Recursion** | Solves problems by **calling itself** with smaller inputs until a base condition is reached. | Factorial, Tower of Hanoi |
+| **Randomized Algorithm** | Uses **random numbers** to make decisions within logic. Often used for optimization. | QuickSort (random pivot), Monte Carlo Method |
+| **Branch and Bound** | Explores all possible solutions but **prunes** paths that cannot yield better results. | Travelling Salesman Problem (TSP) |
+
+---
+
+## 🧱 2️⃣ Based on Functionality / Purpose
+
+| Category | Description | Example Algorithms |
+|-----------|--------------|--------------------|
+| **Searching Algorithms** | Used to find an element in a data structure. | Linear Search, Binary Search |
+| **Sorting Algorithms** | Arranges data in a particular order (ascending/descending). | Bubble Sort, Merge Sort, Quick Sort |
+| **Graph Algorithms** | Used to solve graph-related problems. | BFS, DFS, Dijkstra’s, Kruskal’s |
+| **String Algorithms** | Focused on pattern matching and text processing. | KMP, Rabin-Karp, Z Algorithm |
+| **Numerical Algorithms** | Deal with mathematical and numerical computations. | GCD, Fast Exponentiation |
+| **Optimization Algorithms** | Used to find the best possible solution from many. | Dynamic Programming, Linear Programming |
+| **Machine Learning Algorithms** | Used to learn from data and make predictions. | Decision Tree, K-Means, Neural Networks |
+
+
+
+---
 ## Abstract Data Type
 - ADT is conceptual model that defines and classify data structure based on how they are used and what they provide.
 - They dont specify about how the data structure is implemented or in what programming language they follow.
@@ -50,38 +167,7 @@ elements.
 | **Tree**                    | A hierarchical structure of nodes. | Linked Nodes (using pointers/references), Array (especially for complete trees like Heaps) |
 
 
-## Big-O
-### Complexity Analysis
-- As a programmer you should be aware of 2 things- How much time does this algorithm need to finish and how much space does this need to compute.
-- To know this the scientist discovered the Big-O Notation
-### Big-O Notation
-- mathematical way to describe the efficienct of an algorithm in terms of time and space complexity as the input grow.
-- It focuses on the worst-case scenario and ignores constant factors and lower-order terms, giving a high-level view of how an algorithm scales.
 
-### Big-O Notation Cheat Sheet
-
-| **Big-O**    | **Name**           | **Description**                                   | **Example**                     |
-|--------------|--------------------|---------------------------------------------------|---------------------------------|
-| **O(1)**     | Constant Time      | Execution time does not depend on input size.    | Accessing an array element      |
-| **O(log n)** | Logarithmic Time   | Time grows slowly as input size increases.       | Binary Search                   |
-| **O(n)**     | Linear Time        | Time grows proportionally with input size.       | Iterating through a list        |
-| **O(n log n)**| Linearithmic Time | Slightly worse than linear, common in sorting.   | Merge Sort, Quick Sort (avg)    |
-| **O(n²)**    | Quadratic Time     | Time grows with square of input size.            | Nested loops, Bubble Sort       |
-| **O(2^n)**   | Exponential Time   | Time doubles with each additional input element. | Recursive subset generation     |
-| **O(n!)**    | Factorial Time     | Extremely slow growth, impractical for large n.  | Traveling Salesman brute force  |
-
-### ✅ Tips:
-- **Big-O focuses on growth rate**, not exact time.
-- **Ignore constants and lower-order terms** (e.g., O(2n) → O(n)).
-- Common use: Compare algorithms for scalability.
-
-### Time Complexity
-- Time complexity tells how many operations your algorithm performs relative to input size —
-it measures growth, not actual execution time.
-- If I double the input size, how much more work does my code do?
-
-### Space Complexity
-- Space complexity tells how much extra memory your program uses (besides inputs).
 
 ## 📝 Topics
 - 📊 [Arrays](./Arrays/)
