@@ -1,8 +1,37 @@
 # Data-Structure
+- Data structures are the way of organizing and storing the data or info in a computer or in a program which helps to efficiently mangae and manipulate data.
+- It defines the relationship between the data elements, the operations that
+can be performed, and the rules or constraints for accessing and modifying the data.
 - A Data Structure is the way of orginizing data so that it can be used effectively.
 - Essential ingredients to creating fast and powerful algorithms.
-- makes code cleaner and easier to understand
-- good code results in great product
+- makes code cleaner and easier to understand.
+- good code results in great product.
+
+## Algorithm
+- An algorithm is a set of well-defined instructions, a step-by-step procedure designed
+to solve a specific problem or perform a particular task.
+- Algorithms are used to describe the operations performed on data
+structures.
+- To use an analogy, data structures are like nouns, while algorithms
+are more like verbs.
+
+## Data Structure and Algorithm
+- Data structures and algorithms are interdependent.
+- Data structures provide the organization and representation of information (the data),
+and algorithms serve as instructions for transforming that data. Each data structure
+implicitly defines algorithms for operations, such as adding, retrieving, and removing its
+elements.
+
+## Why Data Structure 
+- DS are the building blocks of Computer science.
+- helps to organize data
+- solve difficult problem
+- improve the efficiency
+- optimize memory usage
+- avoid security risk
+
+## How do we use DS:
+![alt text](image.png)
 
 ## Abstract Data Type
 - ADT is conceptual model that defines and classify data structure based on how they are used and what they provide.
