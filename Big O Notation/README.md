@@ -175,3 +175,6 @@ Measures how much memory an algorithm uses in the **worst-case scenario**.
 > ✨ **In short:**  
 > Big-O is not about *how fast your computer runs the code* —  
 > It’s about *how fast your algorithm grows* when the input gets large.
+
+
+![alt text](image.png)
