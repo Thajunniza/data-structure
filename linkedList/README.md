@@ -119,6 +119,11 @@ Reverse pointer direction using three pointers (prev, curr, next).
 ### 3. Dummy Node Trick
 A dummy node simplifies operations like inserting or deleting at head.  
 It removes edge-case handling and makes code cleaner.
+Use when:
+- Removing nodes (especially at head)
+- Inserting before head
+- Filtering nodes (remove all with value X)
+- Merging lists and returning a new list
 
 ---
 

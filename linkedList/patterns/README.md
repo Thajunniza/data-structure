@@ -2,7 +2,7 @@
 
 This guide contains the **5 most important linked list techniques** used in real LeetCode problems. Each section explains **when to apply the pattern** and includes a clean **Python template**.
 
-## Types
+## 5 Patterns
 1. Fast & Slow Pointers
 2. Cycle Detection (Floyd’s Algorithm)
 3. Two Pointers With Gap (Nth Node From End) 
