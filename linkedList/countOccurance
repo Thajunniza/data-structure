@@ -1,0 +1,85 @@
+"""
+Count Occurrences
+count the occurrence of nodes with a specified data element.
+"""
+
+
+class Node:
+    def __init__(self, data):
+        self.data = data
+        self.next = None
+        
+class LinkedList:
+    def __init__(self):
+        self.head = None
+
+    def append(self, data):
+        """append the data at end of list
+        Args:
+            data (_type_): any data
+        first creat a node for the data
+        then check if linked list is empty
+        if empty mark the head as the new node
+        else
+        get the last node by traversing from head
+        """
+        new_node = Node(data)
+        if self.head == None:
+            self.head = new_node
+            return
+        else:
+            last_node = self.head
+            while last_node.next:
+                last_node = last_node.next
+            last_node.next = new_node
+    def print_list(self):
+        """
+        print out the entries of a linked list.
+        start from head if head is not empty
+        print head and map ton next
+        """
+        curr_data = self.head
+        while curr_data:
+            print(curr_data.data)
+            curr_data = curr_data.next
+    
+    def getLength(self):
+        i = 0
+        curr = self.head
+        while curr:
+            i += 1
+            curr = curr.next
+        return i
+    
+    def count_occurences_iterative(self, data):
+        count = 0
+        curr = self.head
+        while curr:
+            if curr.data == data:
+                count += 1
+            curr = curr.next
+        return count  
+    
+    
+             
+    
+
+## Execution
+llist = LinkedList()
+llist.append(1)
+llist.append(2)
+llist.append(3)
+llist.append(4)
+llist.append(5)
+llist.append(6)
+print(llist.print_list())
+print(llist.count_occurences_iterative(1))
+llist_2 = LinkedList()
+llist_2.append(1)
+llist_2.append(2)
+llist_2.append(1)
+llist_2.append(3)
+llist_2.append(1)
+llist_2.append(4)
+llist_2.append(1)
+print(llist_2.count_occurences_iterative(1))
