@@ -1,6 +1,7 @@
 # STACK
 - Linear Data structure
 - Organizes and manages data in Last in Frist out
+- Open in One End
 ## Operations:
 1. Push - place on top of stack
 2. Pop - removing top element
