@@ -204,15 +204,51 @@ class LinkedList:
         dummy = Node(0,self.head)
         prev = dummy
         for _ in range(indx):
-            if not prev.next:
-                print("No Data")
-                return None
             prev = prev.next
         val = prev.next.val
         prev.next = prev.next.next
         self.len -= 1
         self.head = dummy.next
         return val
+    
+    """ Function to get the value by index
+    -----------------------------------------------------------
+    Time:  O(n)  
+    """ 
+    def get(self,index):
+        if index < 0  or index >= self.len:
+            return None
+        curr = self.head
+        for _ in range(index):
+            curr = curr.next
+        return curr.val
+    
+    """ Function to set the value by index
+    -----------------------------------------------------------
+    Time:  O(n)  
+    """ 
+    def set(self,val,index):  
+        if index < 0  or index >= self.len:
+            return False
+        curr = self.head
+        for _ in range(index):
+            curr = curr.next
+        curr.val = val
+        return True  
+    
+    """ Function to search a value
+    -----------------------------------------------------------
+    Time:  O(n)  
+    """ 
+    def search(self,val):  
+        if self.isEmpty():
+            return False
+        curr = self.head
+        while curr:
+            if curr.val == val:
+                return True
+            curr = curr.next
+        return False
 
 
 # ===========================================================
@@ -248,7 +284,13 @@ if __name__ == "__main__":
     print(f"The Length is: {l1.getLength()}")
     print(l1.deleteAtIndex(2))
     print(l1.print())
+    print(l1.get(2))
+    print(l1.get(7))
+    l1.set(10,1)
+    l1.print()
     print(f"The Length is: {l1.getLength()}")
+    print(l1.search(10))
+    print(l1.search(55))
     l2 = LinkedList()
     print(f"Is Linked is Empty:{l2.isEmpty()}")
     l2.append(2)
