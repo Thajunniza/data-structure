@@ -3,7 +3,7 @@
 Infix to Prefix Conversion using Stack
 ===========================================================
 
-Description:
+Description:Infix to Prefix Conversion using Stack
 ------------
 This module converts an infix expression into its equivalent
 prefix (Polish Notation) expression using a stack-based method.
