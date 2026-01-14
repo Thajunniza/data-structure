@@ -1,6 +1,6 @@
 """
 ===========================================================
-Height of a Binary Tree
+Height/Depth of a Binary Tree
 ===========================================================
 
 Tree height can be defined in TWO valid ways:
