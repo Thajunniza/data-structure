@@ -51,4 +51,6 @@ if __name__ == "__main__":
     preorder(BT.root)
 
 
+# 1->2->4->5->3->6-> 
+
 

@@ -50,5 +50,7 @@ if __name__ == "__main__":
 
     inorder(BT.root)
 
+    # 4->5->2->6->3->1->
+
 
 
