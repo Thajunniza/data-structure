@@ -32,6 +32,14 @@ def inorder(root):
     print(root.val,end="->")
     inorder(root.right)
 
+def inorder_array(root,arr=[]):
+    if not root:
+        return 
+    inorder_array(root.left,arr)
+    arr.append(root.val)
+    inorder_array(root.right,arr)
+    return arr
+
 if __name__ == "__main__":
     
     # Create binary tree
@@ -49,6 +57,8 @@ if __name__ == "__main__":
     BT.root.right.right = Node(6)
 
     inorder(BT.root)
+    print()
+    print(inorder_array(BT.root))
 
     # 4->5->2->6->3->1->
 
