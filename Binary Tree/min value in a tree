@@ -1,0 +1,74 @@
+"""
+===========================================================
+Minimum value of a Binary Tree
+===========================================================
+
+"""
+
+from collections import deque
+
+
+class Node(object):
+    def __init__(self, val, left=None, right=None):
+        self.val = val
+        self.left = left
+        self.right = right
+
+
+class BinaryTree(object):
+    def __init__(self, root):
+        self.root = Node(root)
+
+
+# ---------------------------------------------------------
+# Min Value using Recursion (DFS)
+# ---------------------------------------------------------
+def min_value(root):
+    if not root:
+        return float("inf")
+    leftmin = min_value(root.left)
+    rightmin = min_value(root.right)
+    return min(root.val,min(leftmin,rightmin))
+
+
+# ---------------------------------------------------------
+# Min Value using Stack (DFS)
+# ---------------------------------------------------------
+def min_value_stack(root):
+    if not root:
+        return 0
+
+    stack = []
+    stack.append(root)
+    result = float("inf")
+    while stack:
+        node = stack.pop()
+        result = min(result,node.val)
+        if node.left:
+            stack.append(node.left)
+        if node.right:
+            stack.append(node.right)
+    return result
+
+
+# ---------------------------------------------------------
+# Driver Code
+# ---------------------------------------------------------
+if __name__ == "__main__":
+
+    # Binary Tree Structure
+    #       1
+    #      /  \
+    #    2     3
+    #   / \     \
+    #  4   5     6
+
+    BT = BinaryTree(10)
+    BT.root.left = Node(21)
+    BT.root.right = Node(31)
+    BT.root.left.left = Node(4)
+    BT.root.left.right = Node(5)
+    BT.root.right.right = Node(6)
+
+    print("Minimum Value - Recursive :", min_value(BT.root))
+    print("Minimum Value - Stack :", min_value_stack(BT.root))
